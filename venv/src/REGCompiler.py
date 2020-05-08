@@ -20,7 +20,7 @@ class FSMState:
         self.connection1 = connection1
         self.connection2 = connection2
 
-    def printState(self):
+    def print_state(self):
         print(str(self.state_number) + " " + self.chars + " " + str(self.connection1) + " " + str(self.connection2))
 
 
@@ -198,11 +198,10 @@ def main():
         print('Usage: python3 REGCompiler.py <regular_expression>')
         sys.exit(1)
     _regx = sys.argv[1]
-    print(_regx)
     parse()
     if _states:
         for s in _states:
-            s.printState()
+            s.print_state()
     else:
         error()
 
